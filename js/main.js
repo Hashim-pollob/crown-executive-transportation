@@ -282,6 +282,13 @@
 
       quoteForm.style.display = 'none';
       thanksPanel.classList.add('show');
+      // Google Ads Conversion Tracking
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18257985940/Fim-CKK768McEJSDi4JE'
+        });
+      }
+      
     } catch (err) {
       formError.style.display = 'block';
       formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
