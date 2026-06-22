@@ -248,15 +248,46 @@
     closePicker();
   });
 
-  quoteForm.addEventListener('submit', (e) => {
+  // ---------- Send quote request via Formspree ----------
+  // 1. Go to https://formspree.io and create a free account.
+  // 2. Create a new form, set its destination to your business email.
+  // 3. Copy the endpoint it gives you (looks like https://formspree.io/f/abc123xy)
+  // 4. Paste it below, replacing the placeholder. That's it — no other code changes needed.
+  const FORM_ENDPOINT = 'https://formspree.io/f/mwvdegrb';
+
+  const quoteSubmitBtn = document.getElementById('quoteSubmitBtn');
+  const formError = document.getElementById('formError');
+
+  quoteForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!hiddenDate.value || !hiddenTime.value) {
       dtTrigger.classList.add('error');
       dtTrigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
-    quoteForm.style.display = 'none';
-    thanksPanel.classList.add('show');
+
+    formError.style.display = 'none';
+    quoteSubmitBtn.disabled = true;
+    quoteSubmitBtn.textContent = 'Sending...';
+
+    try {
+      const formData = new FormData(quoteForm);
+      const response = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: formData
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      quoteForm.style.display = 'none';
+      thanksPanel.classList.add('show');
+    } catch (err) {
+      formError.style.display = 'block';
+      formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      quoteSubmitBtn.disabled = false;
+      quoteSubmitBtn.textContent = 'Get a Free Quote';
+    }
   });
 
   // ---------- Direct call popover ----------

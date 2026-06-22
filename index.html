@@ -19,7 +19,7 @@
   "name": "Crown Executive Transportation",
   "description": "Executive black car and luxury Chevrolet Suburban transportation serving Greater Los Angeles, Orange County, and Ventura County.",
   "telephone": "+1-347-547-9667",
-  "email": "hashimpollob@gmail.com",
+  "email": "info@crownexecutivetransportation.com",
   "areaServed": ["Los Angeles County", "Orange County", "Ventura County"],
   "priceRange": "$$$",
   "openingHours": "Mo-Su 00:00-24:00"
@@ -466,25 +466,26 @@
     <div class="form-panel reveal">
       <form id="quoteForm">
         <div class="form-grid">
-          <div class="field"><label for="fname">Full Name</label><input id="fname" type="text" required></div>
-          <div class="field"><label for="fphone">Phone Number</label><input id="fphone" type="tel" required></div>
-          <div class="field full"><label for="femail">Email Address</label><input id="femail" type="email" required></div>
-          <div class="field"><label for="fpickup">Pickup Location</label><input id="fpickup" type="text" required></div>
-          <div class="field"><label for="fdrop">Drop-Off Location</label><input id="fdrop" type="text" required></div>
+          <div class="field"><label for="fname">Full Name</label><input id="fname" name="full_name" type="text" required></div>
+          <div class="field"><label for="fphone">Phone Number</label><input id="fphone" name="phone" type="tel" required></div>
+          <div class="field full"><label for="femail">Email Address</label><input id="femail" name="email" type="email" required></div>
+          <div class="field"><label for="fpickup">Pickup Location</label><input id="fpickup" name="pickup_location" type="text" required></div>
+          <div class="field"><label for="fdrop">Drop-Off Location</label><input id="fdrop" name="dropoff_location" type="text" required></div>
           <div class="field full dt-trigger" id="dtTrigger" tabindex="0" role="button" aria-haspopup="dialog">
             <label>Pickup Date &amp; Time</label>
             <div class="dt-value" id="dtValue">Select date &amp; time</div>
-            <input type="hidden" id="fdate" required>
-            <input type="hidden" id="ftime" required>
+            <input type="hidden" id="fdate" name="pickup_date" required>
+            <input type="hidden" id="ftime" name="pickup_time" required>
           </div>
-          <div class="field"><label for="fpax">Number of Passengers</label><input id="fpax" type="number" min="1" max="6" required></div>
-          <div class="field"><label for="fbags">Number of Luggage</label><input id="fbags" type="number" min="0" required></div>
-          <div class="field full"><label for="fflight">Flight Number (Optional)</label><input id="fflight" type="text"></div>
-          <div class="field full"><label for="fnotes">Additional Notes</label><textarea id="fnotes"></textarea></div>
+          <div class="field"><label for="fpax">Number of Passengers</label><input id="fpax" name="passengers" type="number" min="1" max="6" required></div>
+          <div class="field"><label for="fbags">Number of Luggage</label><input id="fbags" name="luggage" type="number" min="0" required></div>
+          <div class="field full"><label for="fflight">Flight Number (Optional)</label><input id="fflight" name="flight_number" type="text"></div>
+          <div class="field full"><label for="fnotes">Additional Notes</label><textarea id="fnotes" name="notes"></textarea></div>
         </div>
         <div class="submit-row">
-          <button type="submit" class="btn btn-gold">Get a Free Quote</button>
+          <button type="submit" class="btn btn-gold" id="quoteSubmitBtn">Get a Free Quote</button>
         </div>
+        <p class="form-error" id="formError">Something went wrong sending your request. Please call us directly or try again.</p>
         <p class="form-note">By submitting, you agree to be contacted about your transportation request.</p>
       </form>
 
@@ -513,7 +514,7 @@
         </div>
         <div class="ci-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          <div><div class="t">Email</div><div class="v"><a href="mailto:hashimpollob@gmail.com">hashimpollob@gmail.com</a></div></div>
+          <div><div class="t">Email</div><div class="v"><a href="mailto:info@crownexecutivetransportation.com">info@crownexecutivetransportation.com</a></div></div>
         </div>
         <div class="ci-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg>
@@ -571,7 +572,7 @@
         <h5>Contact</h5>
         <ul>
           <li><a href="tel:+13475479667">(347) 547-9667</a></li>
-          <li><a href="mailto:hashimpollob@gmail.com">hashimpollob@gmail.com</a></li>
+          <li><a href="mailto:info@crownexecutivetransportation.com">info@crownexecutivetransportation.com</a></li>
           <li>Available 24/7</li>
         </ul>
       </div>
