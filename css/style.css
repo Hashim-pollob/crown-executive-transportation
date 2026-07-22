@@ -177,7 +177,7 @@
   }
 
   /* ---------- Service cards ---------- */
-  .grid-services{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .grid-services{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
   .service-card{background:var(--black); padding:38px 30px; transition:background .3s ease;}
   .service-card:hover{background:var(--charcoal-2);}
   .service-card .icon-wrap{
@@ -210,7 +210,7 @@
   }
 
   /* ---------- Fleet ---------- */
-  .fleet-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .fleet-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
   .fleet-card{background:var(--charcoal); border:1px solid var(--line); display:flex; flex-direction:column;}
   .fleet-card-art{
     position:relative; height:178px; overflow:hidden;
