@@ -319,7 +319,7 @@
   });
 
   callCopyBtn.addEventListener('click', () => {
-    const number = '(347) 547-9667';
+    const number = '(747) 363-5708';
     const fallbackCopy = () => {
       const temp = document.createElement('textarea');
       temp.value = number;
