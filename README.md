@@ -26,7 +26,7 @@ crown-executive-transportation/
    - [Formspree](https://formspree.io) or [EmailJS](https://www.emailjs.com) — add a few lines to `js/main.js`, no backend needed
    - Your own backend endpoint, if you have one
 
-**2. Phone number and email.** Search `index.html` for `3475479667` and `hashimpollob@gmail.com` to find every place they appear (header, hero, contact section, footer, floating button, the call popover) and swap in your final numbers/address.
+**2. Phone number and email.** Search `index.html` for `(747)363 -5708` and `hashimpollob@gmail.com` to find every place they appear (header, hero, contact section, footer, floating button, the call popover) and swap in your final numbers/address.
 
 **3. Fleet pricing.** The fleet cards don't show rates yet. Open `index.html`, find `class="fleet-card-body"`, and add a price line near the "Get a Free Quote" button once you've settled on rates.
 
